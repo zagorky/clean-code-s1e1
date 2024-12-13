@@ -1,54 +1,59 @@
 /* Basic Style */
-.header__title--hidden{
+.header__title--hidden, 
+.header__subtitle--hidden,
+.add-task-section__title--hidden {
   visibility: hidden;
 }
+
 
 body {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
 }
-.aaa {
+.header {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.aaa img {
+.header__image{
   width: 100%;
 }
-.aaa .more_inf {
+.header__link{
   font-family: fantasy, cursive;
 }
 
 @media (max-width:768px) {
-.aaa {  text-align: center;
+.header {  text-align: center;
 }
 }
-.centered-main-page-element {
+.main-content {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.add-task-section__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1
 }
-.task-row-wrapper {
+.add-task-section__row {
   display: flex;
 }
-ul {
+.task-list {
   margin:0;
   padding: 0px;
 }
-li, h2 {
+.task-list__item, .completed-task-section__title, .incomplited-task-section__title {
   list-style:none;
 }
-input,button{
+
+.add-task-section__input, .task-list__checkbox, .add-task-section__button, .task-list__button {
   outline:none;
 }
-button {
+.task-list__button, 
+.add-task-section__button {
   background: none;
   border: 0px;
   color: #888;
@@ -57,11 +62,13 @@ button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-button:hover {
+.task-list__button:hover, 
+.add-task-section__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
-h2,
+.completed-task-section__title,
+.incomplited-task-section__title, 
 label[for="new-task"] {
   color: #333;
   font-weight: 700;
@@ -97,7 +104,8 @@ input#new-task {
 }
 
 /* Task list */
-li {
+
+.task-list__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -122,12 +130,12 @@ li > label {
 li >    input[type="text"] {
   width: 226px
 }
-button.delete img {
+.task-list__button-image {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.task-list__button-image:hover {
   transform: rotateZ(0);
 }
 
@@ -142,11 +150,11 @@ ul li input[type="text"] {
   display:none
 }
 
-ul li.editMode input[type="text"] {
+ul li.task-list__item--edit-mode input[type="text"] {
   display:inline-block;
   width:224px
 }
 
-ul li.editMode label {
+ul li.task-list__item--edit-mode label {
   display:none;
 }
