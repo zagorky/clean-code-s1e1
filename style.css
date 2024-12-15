@@ -52,11 +52,17 @@
   margin: 0;
   padding: 0px;
 }
-.task-list__item, .completed-task-section__title, .incomplited-task-section__title {
+.task-list__item, 
+.completed-task-section__title, 
+.incomplited-task-section__title {
   list-style: none;
 }
 
-.add-task__input, .task-list__checkbox, .add-task-section__button, .task-list__button, .task-list__input {
+.add-task__input, 
+.task-list__checkbox, 
+.add-task-section__button, 
+.task-list__button, 
+.task-list__input {
   outline:none;
 }
 
